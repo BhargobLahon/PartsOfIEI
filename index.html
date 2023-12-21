@@ -44,7 +44,7 @@
             <div id="wrapper-2" class="wrapper-2">
                 <div class="form-container">
                 <div class="title-text">
-                    <div class="title login">Bring your journey!</div>
+                    <div class="title login">Bring your jurney!</div>
                     
                 </div>
                 <form action="#" class="signup">
@@ -80,7 +80,7 @@
                     </div>
                     <div class="field btn">
                         <div class="btn-layer"></div>
-                        <input type="submit" value="Signup">
+                        <input type="submit" value="Signup" class="signupbtn">
                     </div>
                 </form>
             </div>
@@ -95,20 +95,22 @@
             const wrapper1 = document.querySelector('.wrapper-1');
             const wrapper2 = document.querySelector('.wrapper-2');
             const slideControls = document.querySelector('.slide-controls');
+            const signupBtn = document.querySelector("label.signup");
+            const signupLink = document.querySelector("form .signup-link a");
 
             slideControls.addEventListener('click', function () {
                 if (loginRadio.checked) {
-                    wrapper1.style.display = 'block';
+                    wrapper1.style.display = 'flex';
                     wrapper2.style.display = 'none';
                 } else if (signupRadio.checked) {
                     wrapper1.style.display = 'none';
-                    wrapper2.style.display = 'block';
+                    wrapper2.style.display = 'flex';
                 }
             });
-            signupLink.onclick = () =>{
-                signupBtn.click();
-                return false;
-            };
+            signupLink.onclick = () => {
+            signupBtn.click();
+            return false;
+        };
         });
         </script>
 </body>
